@@ -2,11 +2,9 @@
 
 count=0
 
-cd $1
-for file1 in *
+for file1 in $1/*
 do
-	cd $2
-	for file2 in *
+	for file2 in $2/*
 	do
 		if cmp -c -s $file1 $file2
 		then
